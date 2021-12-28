@@ -17,6 +17,8 @@
 #include "sort/pigeonhole-sort.h"
 #include "sort/insertion-sort.h"
 #include "sort/comb-sort.h"
+#include "sort/shell-sort.h"
+#include "sort/cycle-sort.h"
 
 #include "divide-and-conquer/power.h"
 #include "divide-and-conquer/find-max.h"
@@ -209,13 +211,29 @@ void sort_tests(){
 
     // insertion sort
     insertion_sort(vec.begin(), vec.end());
+    print(vec);
+
+    // shell sort
+    shell_sort(vec.begin(), vec.end());
+    print(vec);
+
+    // cycle sort
+    cycle_sort(vec.begin(), vec.end());
+    print(vec);
+
+    // iterative quick sort
+    iterative_quick_sort(vec.begin(), vec.end() - 1);
     print(vec);*/
+
+    // iterative merge sort
+    iterative_merge_sort(vec.begin(), vec.end() - 1);
+    print(vec);
 }
 
 int main() {
     //search_tests();
 
-    //sort_tests();
+    sort_tests();
 
     //std::cout << power(3,4) << std::endl;
 
@@ -806,12 +824,12 @@ int main() {
 
     //std::cout << std::boolalpha << is_palindrome(1234321) << std::endl;
 
-    std::vector<int> vec1{4, 9, 8, 2, 6};
+    /*std::vector<int> vec1{4, 9, 8, 2, 6};
     std::cout << largest_even_sum(vec1, 3) << std::endl;
     std::vector<int> vec2{7, 7, 7, 7, 7};
     std::cout << largest_even_sum(vec2, 1) << std::endl;
     std::vector<int> vec3{5, 6, 3, 4, 2};
-    std::cout << largest_even_sum(vec3, 5) << std::endl;
+    std::cout << largest_even_sum(vec3, 5) << std::endl;*/
 
     return 0;
 }

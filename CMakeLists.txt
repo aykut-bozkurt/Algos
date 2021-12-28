@@ -19,6 +19,8 @@ add_executable(Algos
         sort/pigeonhole-sort.h sort/pigeonhole-sort.tpp
         sort/insertion-sort.h sort/insertion-sort.tpp
         sort/comb-sort.h sort/comb-sort.tpp
+        sort/shell-sort.h sort/shell-sort.tpp
+        sort/cycle-sort.h sort/cycle-sort.tpp
         divide-and-conquer/power.h divide-and-conquer/power.cpp
         divide-and-conquer/find-max.h divide-and-conquer/find-max.cpp
         divide-and-conquer/median-of-2-array.h divide-and-conquer/median-of-2-array.cpp

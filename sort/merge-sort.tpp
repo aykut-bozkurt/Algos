@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cmath>
 
 template<class Iter>
 void merge(Iter start, Iter end, Iter mid){
@@ -63,4 +64,36 @@ void merge_sort(Iter start, Iter end){
     merge_sort(mid + 1, end);
 
     merge(start, end, mid);
+}
+
+template<class Iter>
+void iterative_merge_sort(Iter start, Iter end){
+    int size = std::distance(start, end) + 1;
+    int stride = 1;
+    int idx;
+    Iter left_start;
+    Iter right_end;
+    Iter mid;
+    while(stride <= size){
+        idx = 0;
+
+        while(idx < (size - 1)){
+            left_start = start + idx * stride;
+
+            if(2 * (idx + 1) * stride - 1 < size){
+                right_end = start + 2 * (idx + 1) * stride - 1;
+                mid = left_start + (std::distance(left_start, right_end) / 2);
+            }
+            else{
+                right_end = start + size - 1;
+                mid = right_end - 1;
+            }
+
+            merge(left_start, right_end, mid);
+
+            idx += stride;
+        }
+
+        stride *= 2;
+    }
 }
