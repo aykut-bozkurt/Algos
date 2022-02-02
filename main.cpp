@@ -120,6 +120,14 @@
 #include "amazon-interview/is-num-palindrome.h"
 #include "amazon-interview/largest-even-sum.h"
 
+#include "string/naive-search.h"
+#include "string/kmp-search.h"
+#include "string/rabin-karp.h"
+#include "string/optimized-naive-search.h"
+
+#include "microsoft-interview/doubly-list.h"
+#include "microsoft-interview/heap.h"
+
 template<class Container>
 void print(Container&& container){
     for(auto& el : container){
@@ -168,7 +176,7 @@ void search_tests(){
 }
 
 void sort_tests(){
-    std::vector<int> vec{10, 30, 20, 15, 12};
+    //std::vector<int> vec{10, 30, 20, 15, 12};
 
     /*
     // bubble sort
@@ -223,17 +231,17 @@ void sort_tests(){
 
     // iterative quick sort
     iterative_quick_sort(vec.begin(), vec.end() - 1);
-    print(vec);*/
+    print(vec);
 
     // iterative merge sort
     iterative_merge_sort(vec.begin(), vec.end() - 1);
-    print(vec);
+    print(vec);*/
 }
 
 int main() {
     //search_tests();
 
-    sort_tests();
+    //sort_tests();
 
     //std::cout << power(3,4) << std::endl;
 
@@ -830,6 +838,66 @@ int main() {
     std::cout << largest_even_sum(vec2, 1) << std::endl;
     std::vector<int> vec3{5, 6, 3, 4, 2};
     std::cout << largest_even_sum(vec3, 5) << std::endl;*/
+
+    /*print(naive_search("THIS IS A TEST TEXT", "TEST"));
+    print(naive_search("AABAACAADAABAABA", "AABA"));*/
+
+    /*print(kmp_search("THIS IS A TEST TEXT", "TEST"));
+    print(kmp_search("AABAACAADAABAABA", "AABA"));*/
+
+    /*print(rk_search("THIS IS A TEST TEXT", "TEST"));
+    print(rk_search("AABAACAADAABAABA", "AABA"));*/
+
+    //print(optimized_naive_search("ABCEABCDABCEABCD", "ABCD"));
+
+    /*DoublyList dl{};
+
+    // push_back 10 elements
+    for(int i = 0; i <= 10; i++){
+        dl.push_back(i);
+    }
+    dl.print();
+
+    // erase from middle
+    dl.erase(5);
+    dl.print();
+
+    // erase from head
+    dl.erase(0);
+    dl.print();
+
+    // erase from tail
+    dl.erase(10);
+    dl.print();
+
+    // erase all
+    for(int i = 0; i <= 10; i++){
+        dl.erase(i);
+    }
+    dl.print();*/
+
+    ///////////////////////
+
+    /*Heap heap{};
+
+    // push 10 elements
+    for(int i = 10; i >= 0; i--){
+        heap.push(i);
+    }
+    heap.print();
+
+    // print top
+    std::cout << heap.top() << std::endl;
+
+    // pop min
+    heap.pop();
+    heap.print();
+
+    // pop all
+    while(heap.size() > 0){
+        heap.pop();
+    }
+    heap.print();*/
 
     return 0;
 }

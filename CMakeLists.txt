@@ -113,4 +113,11 @@ add_executable(Algos
         amazon-interview/min-number-coins.h amazon-interview/min-number-coins.cpp
         amazon-interview/stock-profit.h amazon-interview/stock-profit.cpp
         amazon-interview/is-num-palindrome.h amazon-interview/is-num-palindrome.cpp
-        amazon-interview/largest-even-sum.h amazon-interview/largest-even-sum.cpp)
+        amazon-interview/largest-even-sum.h amazon-interview/largest-even-sum.cpp
+        string/naive-search.h string/naive-search.cpp
+        string/kmp-search.h string/kmp-search.cpp
+        string/rabin-karp.h string/rabin-karp.cpp
+        string/optimized-naive-search.h string/optimized-naive-search.cpp
+        microsoft-interview/doubly-list.h microsoft-interview/doubly-list.cpp
+        microsoft-interview/heap.h microsoft-interview/heap.cpp
+        )
