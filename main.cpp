@@ -127,6 +127,11 @@
 
 #include "microsoft-interview/doubly-list.h"
 #include "microsoft-interview/heap.h"
+#include "microsoft-interview/suffix-array.h"
+#include "microsoft-interview/trie.h"
+#include "microsoft-interview/patricia-trie.h"
+#include "microsoft-interview/AVL.h"
+#include "microsoft-interview/BST.h"
 
 template<class Container>
 void print(Container&& container){
@@ -898,6 +903,74 @@ int main() {
         heap.pop();
     }
     heap.print();*/
+
+    /*SuffixArray suffix_array("banana");
+    std::cout << std::boolalpha << suffix_array.search("nana") << std::endl;
+    std::cout << std::boolalpha << suffix_array.search("ara") << std::endl;*/
+
+    /*
+    std::string keys[] = {"the", "a", "there",
+                          "answer", "any", "by",
+                          "bye", "their" };
+    Trie trie;
+    for (int i = 0; i < 8; i++){
+        trie.insert(keys[i]);
+    }
+    std::cout << std::boolalpha << trie.search("the") << std::endl;
+    std::cout << std::boolalpha << trie.search("these") << std::endl;
+    trie.insert("these");
+    trie.remove("the");
+    std::cout << std::boolalpha << trie.search("the") << std::endl;
+    std::cout << std::boolalpha << trie.search("these") << std::endl;*/
+
+    /*std::string keys[] = {"romane", "romanus", "romulus",
+                          "rubens", "ruber", "rubicon",
+                          "rubicundus" };
+
+    PatriciaTrie pat_trie;
+    for (int i = 0; i < 7; i++){
+        pat_trie.insert(keys[i]);
+    }
+    for (int i = 0; i < 7; i++){
+        std::cout << std::boolalpha << pat_trie.search(keys[i]) << std::endl;
+    }
+    for (int i = 0; i < 7; i++){
+        pat_trie.remove(keys[i]);
+    }
+    for (int i = 0; i < 7; i++){
+        std::cout << std::boolalpha << pat_trie.search(keys[i]) << std::endl;
+    }*/
+
+    /*AVL avl;
+    avl.insert(9);
+    avl.insert(5);
+    avl.insert(10);
+    avl.insert(0);
+    avl.insert(6);
+    avl.insert(11);
+    avl.insert(-1);
+    avl.insert(1);
+    avl.insert(2);
+    avl.preorder();
+
+    avl.remove(10);
+    avl.preorder();*/
+
+    /*BST bst;
+    bst.insert(9);
+    bst.insert(5);
+    bst.insert(10);
+    bst.insert(0);
+    bst.insert(6);
+    bst.insert(11);
+    bst.insert(-1);
+    bst.insert(1);
+    bst.insert(2);
+    bst.preorder();
+
+    bst.remove(10);
+    bst.preorder();*/
+
 
     return 0;
 }

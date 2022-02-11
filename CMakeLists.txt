@@ -120,4 +120,10 @@ add_executable(Algos
         string/optimized-naive-search.h string/optimized-naive-search.cpp
         microsoft-interview/doubly-list.h microsoft-interview/doubly-list.cpp
         microsoft-interview/heap.h microsoft-interview/heap.cpp
+        microsoft-interview/suffix-array.h microsoft-interview/suffix-array.cpp
+        microsoft-interview/trie.h microsoft-interview/trie.cpp
+        microsoft-interview/patricia-trie.h microsoft-interview/patricia-trie.cpp
+        microsoft-interview/suffix-trie.h microsoft-interview/suffix-trie.cpp
+        microsoft-interview/AVL.h microsoft-interview/AVL.cpp
+        microsoft-interview/BST.h microsoft-interview/BST.cpp
         )
