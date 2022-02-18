@@ -132,6 +132,14 @@
 #include "microsoft-interview/patricia-trie.h"
 #include "microsoft-interview/AVL.h"
 #include "microsoft-interview/BST.h"
+#include "microsoft-interview/splay-tree.h"
+#include "microsoft-interview/red-black-tree.h"
+#include "microsoft-interview/B-tree.h"
+#include "microsoft-interview/segment-tree.h"
+#include "microsoft-interview/k-dim-tree.h"
+#include "microsoft-interview/infix-postfix.h"
+#include "microsoft-interview/binomial_heap.h"
+#include "microsoft-interview/fibonacci_heap.h"
 
 template<class Container>
 void print(Container&& container){
@@ -971,6 +979,101 @@ int main() {
     bst.remove(10);
     bst.preorder();*/
 
+    /*SplayTree splay_tree;
+    splay_tree.insert(9);
+    splay_tree.insert(5);
+    splay_tree.insert(10);
+    splay_tree.insert(0);
+    splay_tree.insert(6);
+    splay_tree.insert(11);
+    splay_tree.insert(-1);
+    splay_tree.insert(1);
+    splay_tree.insert(2);
+    splay_tree.preorder();
+    std::cout << std::boolalpha << splay_tree.search(101) << std::endl;
+    std::cout << std::boolalpha << splay_tree.search(11) << std::endl;
+    std::cout << std::boolalpha << splay_tree.search(10) << std::endl;
+    std::cout << std::boolalpha << splay_tree.search(101) << std::endl;
+    splay_tree.preorder();*/
+
+    /*RedBlackTree rb_tree;
+    int arr[] = {1,4,6,3,5,7,8,2,9};
+    for(int i=0;i<9;i++)
+    {
+        rb_tree.insert(arr[i]);
+    }
+    rb_tree.preorder();
+    std::cout << std::boolalpha << rb_tree.search(4) << std::endl;
+    std::cout << std::boolalpha << rb_tree.search(5) << std::endl;
+    std::cout << std::boolalpha << rb_tree.search(101) << std::endl;*/
+
+    /*SegmentTree segment_tree({0,1,2,3,4,5});
+
+    std::cout << segment_tree.query(0, 5) << std::endl;
+    std::cout << segment_tree.query(2, 5) << std::endl;
+    std::cout << segment_tree.query(3, 3) << std::endl;
+    std::cout << segment_tree.query(1, 4) << std::endl;
+
+    segment_tree.update(5, -5);
+    std::cout << segment_tree.query(0, 5) << std::endl;
+    std::cout << segment_tree.query(2, 5) << std::endl;
+    std::cout << segment_tree.query(3, 3) << std::endl;
+    std::cout << segment_tree.query(1, 4) << std::endl;*/
+
+    /*KDimTree kdim_tree;
+    kdim_tree.insert(KDimPoint<2>({30,40}));
+    kdim_tree.insert(KDimPoint<2>({5,25}));
+    kdim_tree.insert(KDimPoint<2>({70,70}));
+    kdim_tree.insert(KDimPoint<2>({10,12}));
+    kdim_tree.insert(KDimPoint<2>({50,30}));
+    kdim_tree.insert(KDimPoint<2>({35,45}));
+    kdim_tree.preorder();
+    kdim_tree.remove(KDimPoint<2>({30,40}));
+    kdim_tree.preorder();*/
+
+    /*std::cout << "2+3*4*4" << std::endl;
+    std::cout << eval_postfix(infix_to_postfix("2+3*4*4")) << std::endl;
+
+    std::cout << "(2+3)*(4*4)" << std::endl;
+    std::cout << eval_postfix(infix_to_postfix("(2+3)*(4*4)")) << std::endl;*/
+
+    /*BinomialHeap binomial_heap{};
+    binomial_heap.insert(0);
+    binomial_heap.insert(1);
+    binomial_heap.insert(2);
+    binomial_heap.insert(7);
+    binomial_heap.insert(8);
+    auto x = binomial_heap.insert(9);
+    binomial_heap.insert(3);
+    binomial_heap.insert(4);
+    binomial_heap.insert(5);
+    binomial_heap.insert(-10);
+    std::cout << binomial_heap.get_min() << std::endl;
+    binomial_heap.extract_min();
+    std::cout << binomial_heap.get_min() << std::endl;
+    binomial_heap.extract_min();
+    std::cout << binomial_heap.get_min() << std::endl;
+    binomial_heap.remove(x);
+    std::cout << binomial_heap.get_min() << std::endl;*/
+
+    FibonacciHeap fibonacci_heap{};
+    fibonacci_heap.insert(0);
+    fibonacci_heap.insert(1);
+    fibonacci_heap.insert(2);
+    fibonacci_heap.insert(7);
+    fibonacci_heap.insert(8);
+    auto x = fibonacci_heap.insert(9);
+    fibonacci_heap.insert(3);
+    fibonacci_heap.insert(4);
+    fibonacci_heap.insert(5);
+    fibonacci_heap.insert(-10);
+    std::cout << fibonacci_heap.get_min() << std::endl;
+    fibonacci_heap.extract_min();
+    std::cout << fibonacci_heap.get_min() << std::endl;
+    fibonacci_heap.extract_min();
+    std::cout << fibonacci_heap.get_min() << std::endl;
+    fibonacci_heap.remove(x);
+    std::cout << fibonacci_heap.get_min() << std::endl;
 
     return 0;
 }

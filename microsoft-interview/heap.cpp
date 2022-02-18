@@ -12,13 +12,13 @@ void Heap::push(int val) {
     vec.push_back(val);
 
     int cur_idx = vec.size() - 1;
-    int parent_idx = std::ceil(1.0f * cur_idx / 2) - 1;
+    int parent_idx = (cur_idx - 1) / 2;
 
     while(parent_idx >= 0){
         if(vec[parent_idx] > vec[cur_idx]){
             std::swap(vec[parent_idx], vec[cur_idx]);
             cur_idx = parent_idx;
-            parent_idx = std::ceil(1.0f * cur_idx / 2) - 1;
+            parent_idx = (cur_idx - 1) / 2;
         }
         else{
             return;

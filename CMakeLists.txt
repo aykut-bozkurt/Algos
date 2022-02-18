@@ -126,4 +126,11 @@ add_executable(Algos
         microsoft-interview/suffix-trie.h microsoft-interview/suffix-trie.cpp
         microsoft-interview/AVL.h microsoft-interview/AVL.cpp
         microsoft-interview/BST.h microsoft-interview/BST.cpp
+        microsoft-interview/splay-tree.h microsoft-interview/splay-tree.cpp
+        microsoft-interview/red-black-tree.h microsoft-interview/red-black-tree.cpp
+        microsoft-interview/segment-tree.h microsoft-interview/segment-tree.cpp
+        microsoft-interview/k-dim-tree.h microsoft-interview/k-dim-tree.cpp
+        microsoft-interview/infix-postfix.h microsoft-interview/infix-postfix.cpp
+        microsoft-interview/binomial_heap.h microsoft-interview/binomial_heap.cpp
+        microsoft-interview/fibonacci_heap.h microsoft-interview/fibonacci_heap.cpp
         )

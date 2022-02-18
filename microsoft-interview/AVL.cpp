@@ -105,7 +105,7 @@ AVLNode* AVL::get_min(AVLNode *cur) {
 
 AVLNode* AVL::remove(AVLNode *cur, int val) {
     if(cur == nullptr){
-        return cur;
+        return nullptr;
     }
     else if(val < cur->val){
         cur->left = remove(cur->left, val);
